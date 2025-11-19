@@ -15,6 +15,8 @@
   border-right: 1px solid var(--secondary);
   padding: 2rem;
   background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  overflow-y: auto;
+  /* Allow scrolling if card is too big */
 }
 
 .terminalSide {
@@ -28,18 +30,28 @@
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+    height: auto;
+    /* Allow growing beyond viewport */
+    min-height: 100vh;
     overflow-y: auto;
+    /* Enable window scrolling */
   }
 
   .profileSide {
     flex: none;
-    height: 40vh;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    /* Ensure enough space for ID card */
+    padding: 2rem 1rem;
     border-right: none;
     border-bottom: 1px solid var(--secondary);
   }
 
   .terminalSide {
     flex: none;
-    height: 60vh;
+    width: 100%;
+    height: 600px;
+    /* Fixed height for terminal on mobile */
   }
 }

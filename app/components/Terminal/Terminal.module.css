@@ -149,3 +149,23 @@
         opacity: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .terminalContainer {
+        border-radius: 0;
+        /* Full width on mobile */
+        border-left: none;
+        border-right: none;
+    }
+
+    .terminalBody {
+        font-size: 0.85rem;
+        /* Slightly smaller text */
+        padding: 1rem;
+    }
+
+    .inputLine {
+        margin-top: 1rem;
+        /* More space for touch */
+    }
+}
