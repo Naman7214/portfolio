@@ -243,6 +243,14 @@ export default function Terminal() {
         }
     };
 
+    // Fix for mobile: Keep cursor at the end
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.selectionStart = inputRef.current.value.length;
+            inputRef.current.selectionEnd = inputRef.current.value.length;
+        }
+    }, [input]);
+
     return (
         <div className={styles.terminalContainer} onClick={() => inputRef.current?.focus()}>
             <div className={styles.header}>
@@ -277,6 +285,8 @@ export default function Terminal() {
                             autoFocus
                             spellCheck={false}
                             autoComplete="off"
+                            autoCorrect="off"
+                            autoCapitalize="off"
                         />
                     </div>
                 )}
