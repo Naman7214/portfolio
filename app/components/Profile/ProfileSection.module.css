@@ -1,0 +1,207 @@
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--foreground);
+}
+
+.perspectiveContainer {
+    perspective: 1000px;
+    margin-bottom: 3rem;
+}
+
+.idCard {
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+    border-radius: 16px;
+    border: 1px solid #30363d;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Lanyard Hole */
+.hole {
+    width: 40px;
+    height: 8px;
+    background: #0d1117;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+    border: 1px solid #30363d;
+}
+
+.cardHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.headerText {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: bold;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 5px rgba(247, 120, 186, 0.5);
+}
+
+.photoArea {
+    width: 140px;
+    height: 140px;
+    background: #000;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+    transform: translateZ(20px);
+}
+
+.placeholderImage {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scanLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    opacity: 0.5;
+    animation: scan 3s linear infinite;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.infoArea {
+    text-align: center;
+    margin-bottom: auto;
+    transform: translateZ(10px);
+}
+
+.name {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.role {
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.idNumber {
+    font-size: 0.75rem;
+    color: var(--secondary);
+    font-family: monospace;
+}
+
+.barcode {
+    font-family: 'Libre Barcode 39', cursive;
+    /* Fallback to simple lines if font not loaded */
+    font-size: 2rem;
+    color: var(--secondary);
+    opacity: 0.5;
+    letter-spacing: 4px;
+    transform: scaleY(0.5);
+    margin-top: 1rem;
+}
+
+/* Holographic sheen */
+.hologram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.05) 45%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0.05) 55%,
+            transparent 100%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.socials {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.link {
+    color: var(--foreground);
+    transition: all 0.2s;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.link:hover {
+    color: var(--primary);
+    text-shadow: 0 0 8px var(--primary);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--accent);
+    border: 1px solid rgba(247, 120, 186, 0.3);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    background: rgba(247, 120, 186, 0.05);
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+    animation: pulse 2s infinite;
+}
