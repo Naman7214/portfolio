@@ -91,11 +91,15 @@ export default function Terminal() {
                     content: `
   >> SKILLS_MATRIX LOADED
   
-  > LANGUAGES  : Python, JavaScript, TypeScript, C++, SQL
-  > FRONTEND   : React, Next.js, Tailwind CSS, HTML5/CSS3
-  > BACKEND    : Node.js, Express, FastAPI, Django
-  > AI/ML      : PyTorch, TensorFlow, LangChain, Hugging Face
-  > TOOLS      : Git, Docker, AWS, Firebase, Vercel
+  > PROGRAMMING    : Python, C++, Java, SQL
+  > MACHINE LEARNING : Scikit-learn, XGBoost, LightGBM, MLflow, SHAP
+  > DEEP LEARNING    : TensorFlow, PyTorch, Keras, HuggingFace Transformers
+  > GENERATIVE AI    : Agno AI, CrewAI, Langraph, Google ADK, LangChain
+  > NLP / VISION     : NLTK, spaCy, OpenCV, ESRGAN, VGG16, YOLO
+  > MLOPS            : Docker, AWS (SageMaker, EC2), Azure ML, Git, FastAPI
+  > DATABASES        : MySQL, PostgreSQL, SQLite, MongoDB
+  > VECTOR DBS       : Pinecone, Chroma, Milvus, Qdrant
+  > WEB DEV          : Flask, Django, ReactJS, NodeJS, ExpressJS
                     `,
                 },
             ]);
