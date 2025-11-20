@@ -111,9 +111,11 @@ export default function Terminal() {
                     content: `
   >> PROJECT_LOGS RETRIEVED
   
-  1. [PORTFOLIO_TERMINAL] : Next.js + Gemini AI (Current Interface)
-  2. [AI_CHATBOT]         : RAG-based assistant using LangChain
-  3. [E_COMMERCE_API]     : Microservices architecture with Docker
+  1. [BROWSER_AUTOMATION] : LLM-driven Chrome extension (FastAPI + Gemini 2.5)
+  2. [CODE_GENERATOR]     : Frontend-to-Backend API generator (GPT-4.1 + Claude 3.7)
+  3. [EXAM_ASSESSMENT]    : Patent-pending OCR-free grading system (Multimodal LLM)
+  4. [CLI_ASSISTANT]      : Coding Assistant CLI with memory (Gemini 2.5 + Pinecone)
+  5. [GUIDO_AI]           : RAG-based Career Guidance Chatbot (NLP)
   
   Type "tell me about [project]" for more details.
                     `,
